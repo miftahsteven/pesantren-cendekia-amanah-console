@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { Lock, Mail, Eye, EyeOff, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Lock, Mail, Eye, EyeOff, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export function LoginPage() {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState('admin');
-  const [password, setPassword] = useState('B47054ii!');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [captchaPassed, setCaptchaPassed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -174,20 +174,6 @@ export function LoginPage() {
               <ArrowRight className="w-4 h-4" />
             </button>
           </form>
-
-          {/* Credentials Helper Note */}
-          <div className="p-4 rounded-2xl bg-[#EBF3FF] border border-[#1F5FD0]/20 space-y-1 text-xs">
-            <p className="font-bold text-[#0B2F6B] flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#17804A]" />
-              Akun Administrator Utama:
-            </p>
-            <p className="text-[#64748B]">
-              Username: <strong className="text-[#0B2F6B]">admin</strong> (atau <span className="font-mono">admin@cendekiaamanah.sch.id</span>)
-            </p>
-            <p className="text-[#64748B]">
-              Password: <strong className="text-[#0B2F6B] font-mono">B47054ii!</strong>
-            </p>
-          </div>
         </div>
       </div>
 
