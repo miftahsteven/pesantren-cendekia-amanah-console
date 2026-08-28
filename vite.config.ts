@@ -22,5 +22,10 @@ export default defineConfig({
         changeOrigin: true
       }
     }
+  },
+  preview: {
+    port: 7030,
+    host: '0.0.0.0',
+    allowedHosts: true
   }
 });
