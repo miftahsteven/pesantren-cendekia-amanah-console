@@ -152,7 +152,7 @@ export function InboxPage() {
               {selectedMessage.status !== 'REPLIED' && (
                 <button
                   onClick={() => handleMarkReplied(selectedMessage.id)}
-                  className="px-3 py-1.5 rounded-xl text-xs font-bold bg-[#17804A] text-white hover:bg-[#13683C] flex items-center gap-1.5 transition-colors"
+                  className="px-3 py-1.5 rounded-xl text-xs font-bold bg-[#D8232A] text-white hover:bg-[#B81C22] flex items-center gap-1.5 transition-colors"
                 >
                   <CheckCircle className="w-4 h-4" />
                   <span>Tandai Sudah Dibalas</span>

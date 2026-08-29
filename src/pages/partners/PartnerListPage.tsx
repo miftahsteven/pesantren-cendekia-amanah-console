@@ -113,7 +113,7 @@ export function PartnerListPage() {
     {
       header: 'Status',
       render: () => (
-        <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#EAF7EF] text-[#17804A]">
+        <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#FDE8E9] text-[#D8232A]">
           Aktif
         </span>
       )

@@ -18,14 +18,14 @@ export function ToastContainer() {
 
 function ToastCard({ toast, onDismiss }: { toast: ToastItem; onDismiss: () => void }) {
   const icons = {
-    success: <CheckCircle2 className="w-5 h-5 text-[#17804A] shrink-0" />,
+    success: <CheckCircle2 className="w-5 h-5 text-[#D8232A] shrink-0" />,
     error: <AlertCircle className="w-5 h-5 text-[#D8232A] shrink-0" />,
     warning: <AlertTriangle className="w-5 h-5 text-[#D4A31C] shrink-0" />,
     info: <Info className="w-5 h-5 text-[#1F5FD0] shrink-0" />
   };
 
   const borders = {
-    success: 'border-[#17804A]/30 bg-[#EAF7EF]',
+    success: 'border-[#D8232A]/30 bg-[#FDE8E9]',
     error: 'border-[#D8232A]/30 bg-[#FEECEC]',
     warning: 'border-[#F0BD28]/40 bg-[#FEF8E8]',
     info: 'border-[#1F5FD0]/30 bg-[#EBF3FF]'

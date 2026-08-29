@@ -84,7 +84,7 @@ export function AdminUsersPage() {
       render: (u) => (
         <span
           className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${
-            u.status === 'ACTIVE' ? 'bg-[#EAF7EF] text-[#17804A]' : 'bg-[#FEECEC] text-[#D8232A]'
+            u.status === 'ACTIVE' ? 'bg-[#FDE8E9] text-[#D8232A]' : 'bg-[#FEECEC] text-[#D8232A]'
           }`}
         >
           {u.status === 'ACTIVE' ? 'Aktif' : 'Non-aktif'}

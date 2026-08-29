@@ -78,7 +78,7 @@ export function BrochureListPage() {
             <FileText className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-[10px] font-bold text-[#17804A] uppercase tracking-wider">
+            <span className="text-[10px] font-bold text-[#D8232A] uppercase tracking-wider">
               {b.unitName}
             </span>
             <h4 className="font-bold text-[#0B2F6B]">{b.title}</h4>

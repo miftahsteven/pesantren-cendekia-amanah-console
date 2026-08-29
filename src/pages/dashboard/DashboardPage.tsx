@@ -34,7 +34,7 @@ const UNIT_COLORS: Record<string, string> = {
   pesantren: '#1A4FA0',
   smp: '#0B2F6B',
   sma: '#1F5FD0',
-  diniyah: '#17804A'
+  diniyah: '#D8232A'
 };
 
 export function DashboardPage() {
@@ -84,7 +84,7 @@ export function DashboardPage() {
     { name: 'Pesantren', value: 153, color: '#1A4FA0' },
     { name: 'SMP Cendekia', value: 142, color: '#0B2F6B' },
     { name: 'SMA Cendekia', value: 128, color: '#1F5FD0' },
-    { name: 'Madrasah Diniyah', value: 63, color: '#17804A' }
+    { name: 'Madrasah Diniyah', value: 63, color: '#D8232A' }
   ];
 
   const contentBarData = [
@@ -294,7 +294,7 @@ export function DashboardPage() {
             {(stats.popularNews || []).map((art: any) => (
               <div key={art.id} className="pt-3.5 first:pt-0 flex items-start justify-between gap-3">
                 <div className="space-y-1 flex-1">
-                  <span className="text-[10px] font-bold text-[#17804A] uppercase tracking-wider">
+                  <span className="text-[10px] font-bold text-[#D8232A] uppercase tracking-wider">
                     {art.category?.name || 'Pesantren'}
                   </span>
                   <Link

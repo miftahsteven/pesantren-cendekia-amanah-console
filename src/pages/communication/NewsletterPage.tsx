@@ -54,7 +54,7 @@ export function NewsletterPage() {
     {
       header: 'Status Langganan',
       render: (s) => (
-        <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#EAF7EF] text-[#17804A]">
+        <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#FDE8E9] text-[#D8232A]">
           {s.status}
         </span>
       )
@@ -87,7 +87,7 @@ export function NewsletterPage() {
           <button
             onClick={handleExportCsv}
             disabled={subscribers.length === 0}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-white bg-[#17804A] hover:bg-[#13683C] shadow-sm transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-white bg-[#D8232A] hover:bg-[#B81C22] shadow-sm transition-all"
           >
             <Download className="w-4 h-4" />
             <span>Export Email CSV</span>

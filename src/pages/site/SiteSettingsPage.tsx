@@ -229,7 +229,7 @@ export function SiteSettingsPage() {
           {/* Kontak & Sekretariat */}
           <div className="bg-white p-6 rounded-2xl border border-[#DDE6F1] shadow-sm space-y-4">
             <h3 className="text-sm font-bold text-[#0B2F6B] uppercase tracking-wider flex items-center gap-2 border-b border-[#DDE6F1] pb-2.5">
-              <MapPin className="w-4 h-4 text-[#17804A]" />
+              <MapPin className="w-4 h-4 text-[#D8232A]" />
               <span>Kontak & Lokasi Sekretariat</span>
             </h3>
 

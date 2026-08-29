@@ -174,7 +174,7 @@ export function PPDBListPage() {
             href={`https://wa.me/${a.whatsapp.replace(/[^0-9]/g, '')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#17804A] hover:underline flex items-center gap-1 font-semibold"
+            className="text-[#D8232A] hover:underline flex items-center gap-1 font-semibold"
           >
             <MessageCircle className="w-3.5 h-3.5" />
             <span>{a.whatsapp}</span>
@@ -260,7 +260,7 @@ export function PPDBListPage() {
 
             <button
               onClick={handleExportCsv}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-white bg-[#17804A] hover:bg-[#13683C] shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-white bg-[#D8232A] hover:bg-[#B81C22] shadow-sm transition-all"
             >
               <Download className="w-4 h-4" />
               <span>Export CSV</span>
@@ -363,7 +363,7 @@ export function PPDBListPage() {
                   </div>
                   <div>
                     <span className="text-[#64748B]">No. WhatsApp Aktif:</span>
-                    <p className="font-bold text-[#17804A] mt-0.5 flex items-center gap-1">
+                    <p className="font-bold text-[#D8232A] mt-0.5 flex items-center gap-1">
                       <MessageCircle className="w-3.5 h-3.5" />
                       <span>{selectedApplicant.whatsapp}</span>
                     </p>
@@ -386,7 +386,7 @@ export function PPDBListPage() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3 rounded-full text-xs font-bold text-white bg-[#17804A] hover:bg-[#13683C] flex items-center justify-center gap-2 shadow-sm transition-all"
+              className="w-full py-3 rounded-full text-xs font-bold text-white bg-[#D8232A] hover:bg-[#B81C22] flex items-center justify-center gap-2 shadow-sm transition-all"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Hubungi Wali Santri via WhatsApp</span>

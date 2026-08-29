@@ -100,7 +100,7 @@ export function HeroSlidesPage() {
             <img src={getUploadUrl(s.imageUrl)} alt="" className="w-full h-full object-cover" />
           </div>
           <div>
-            <span className="text-[10px] font-bold text-[#17804A] uppercase tracking-wider">
+            <span className="text-[10px] font-bold text-[#D8232A] uppercase tracking-wider">
               {s.badge}
             </span>
             <h4 className="font-bold text-[#0B2F6B] text-xs">{s.title}</h4>

@@ -16,6 +16,8 @@ import { OpinionEditorPage } from './pages/opinions/OpinionEditorPage';
 import { UnitListPage } from './pages/units/UnitListPage';
 import { UnitEditorPage } from './pages/units/UnitEditorPage';
 
+import { FacilityListPage } from './pages/facilities/FacilityListPage';
+import { OrganizationListPage } from './pages/organizations/OrganizationListPage';
 import { ProgramListPage } from './pages/programs/ProgramListPage';
 import { AgendaListPage } from './pages/agenda/AgendaListPage';
 import { AchievementListPage } from './pages/achievements/AchievementListPage';
@@ -59,6 +61,8 @@ export function App() {
 
               <Route path="units" element={<UnitListPage />} />
               <Route path="units/edit/:id" element={<UnitEditorPage />} />
+              <Route path="organizations" element={<OrganizationListPage />} />
+              <Route path="facilities" element={<FacilityListPage />} />
 
               <Route path="programs" element={<ProgramListPage />} />
               <Route path="agendas" element={<AgendaListPage />} />

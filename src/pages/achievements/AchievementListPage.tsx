@@ -12,7 +12,7 @@ const unitBadgeStyles: Record<string, { bg: string; text: string; label: string 
   pesantren: { bg: 'bg-[#EBF3FF]', text: 'text-[#1F5FD0]', label: 'Pesantren' },
   smp: { bg: 'bg-[#E0F2FE]', text: 'text-[#0284C7]', label: 'SMP' },
   sma: { bg: 'bg-[#EEF2FF]', text: 'text-[#4F46E5]', label: 'SMA' },
-  diniyah: { bg: 'bg-[#EAF7EF]', text: 'text-[#17804A]', label: 'Diniyah' }
+  diniyah: { bg: 'bg-[#FDE8E9]', text: 'text-[#D8232A]', label: 'Diniyah' }
 };
 
 export function AchievementListPage() {
@@ -161,8 +161,8 @@ export function AchievementListPage() {
                 {ach.badge}
               </span>
               {ach.isFeatured && (
-                <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] font-semibold bg-[#EAF7EF] text-[#17804A]">
-                  <Star className="w-2.5 h-2.5 fill-[#17804A]" />
+                <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] font-semibold bg-[#FDE8E9] text-[#D8232A]">
+                  <Star className="w-2.5 h-2.5 fill-[#D8232A]" />
                   Beranda
                 </span>
               )}

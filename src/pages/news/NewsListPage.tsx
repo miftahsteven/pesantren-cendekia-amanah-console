@@ -73,7 +73,7 @@ export function NewsListPage() {
             />
           </div>
           <div className="space-y-0.5 max-w-sm">
-            <span className="text-[10px] font-bold text-[#17804A] uppercase tracking-wider">
+            <span className="text-[10px] font-bold text-[#D8232A] uppercase tracking-wider">
               {art.category?.name || 'Pesantren'}
             </span>
             <Link

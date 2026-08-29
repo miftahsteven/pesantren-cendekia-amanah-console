@@ -24,9 +24,9 @@ export function StatCard({
       border: 'border-[#1F5FD0]/20'
     },
     green: {
-      bg: 'bg-[#EAF7EF]',
-      text: 'text-[#17804A]',
-      border: 'border-[#17804A]/20'
+      bg: 'bg-[#FDE8E9]',
+      text: 'text-[#D8232A]',
+      border: 'border-[#D8232A]/20'
     },
     gold: {
       bg: 'bg-[#FEF8E8]',
@@ -54,7 +54,7 @@ export function StatCard({
         <div className="flex items-baseline gap-2">
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0B2F6B] tracking-tight">{value}</h3>
           {trend && (
-            <span className="text-xs font-bold text-[#17804A] bg-[#EAF7EF] px-1.5 py-0.5 rounded">
+            <span className="text-xs font-bold text-[#D8232A] bg-[#FDE8E9] px-1.5 py-0.5 rounded">
               {trend}
             </span>
           )}

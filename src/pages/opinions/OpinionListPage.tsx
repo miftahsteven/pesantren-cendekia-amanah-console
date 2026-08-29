@@ -64,7 +64,7 @@ export function OpinionListPage() {
             />
           </div>
           <div className="space-y-0.5 max-w-sm">
-            <span className="text-[10px] font-bold text-[#17804A] uppercase tracking-wider">
+            <span className="text-[10px] font-bold text-[#D8232A] uppercase tracking-wider">
               {op.author?.name || 'KH. Cholil Nafis'}
             </span>
             <p className="font-bold text-[#0B2F6B] line-clamp-1">{op.title}</p>

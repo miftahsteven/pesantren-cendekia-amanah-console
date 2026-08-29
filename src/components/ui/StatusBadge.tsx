@@ -14,8 +14,8 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     case 'ACTIVE':
     case 'READ':
       return (
-        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#EAF7EF] text-[#17804A] border border-[#17804A]/20">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#17804A] mr-1.5"></span>
+        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#FDE8E9] text-[#D8232A] border border-[#D8232A]/20">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#D8232A] mr-1.5"></span>
           {normalized === 'PUBLISHED' ? 'Terbit' : normalized === 'VERIFIED' ? 'Terverifikasi' : normalized === 'ACCEPTED' ? 'Diterima' : normalized === 'READ' ? 'Dibaca' : 'Aktif'}
         </span>
       );

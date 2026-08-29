@@ -86,7 +86,7 @@ export function Topbar() {
         <div className="relative" ref={createRef}>
           <button
             onClick={() => setCreateDropdownOpen(!createDropdownOpen)}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold text-white bg-[#17804A] hover:bg-[#13683C] shadow-xs hover:shadow-md transition-all"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold text-white bg-[#D8232A] hover:bg-[#B81C22] shadow-xs hover:shadow-md transition-all"
           >
             <Plus className="w-4 h-4 stroke-[2.5]" />
             <span className="hidden sm:inline">Buat Baru</span>
@@ -108,7 +108,7 @@ export function Topbar() {
                 onClick={() => setCreateDropdownOpen(false)}
                 className="flex items-center gap-2.5 px-4 py-2 text-xs font-semibold text-[#1A293B] hover:bg-[#F4F7FB] hover:text-[#1F5FD0] transition-colors"
               >
-                <MessageSquareQuote className="w-4 h-4 text-[#17804A]" />
+                <MessageSquareQuote className="w-4 h-4 text-[#D8232A]" />
                 <span>Opini Baru</span>
               </Link>
               <Link
@@ -171,7 +171,7 @@ export function Topbar() {
               <div className="px-4 py-2.5 border-b border-[#DDE6F1]">
                 <p className="text-xs font-bold text-[#0B2F6B] truncate">{user?.name}</p>
                 <p className="text-[11px] text-[#64748B] truncate">{user?.email}</p>
-                <span className="inline-block mt-1 px-2 py-0.5 rounded text-[9px] font-bold bg-[#EAF7EF] text-[#17804A] uppercase">
+                <span className="inline-block mt-1 px-2 py-0.5 rounded text-[9px] font-bold bg-[#FDE8E9] text-[#D8232A] uppercase">
                   {user?.roles?.[0] || 'ADMIN'}
                 </span>
               </div>

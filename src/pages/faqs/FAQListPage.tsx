@@ -67,7 +67,7 @@ export function FAQListPage() {
       header: 'Pertanyaan & Jawaban',
       render: (f) => (
         <div className="space-y-1">
-          <span className="text-[10px] font-bold text-[#17804A] uppercase tracking-wider">
+          <span className="text-[10px] font-bold text-[#D8232A] uppercase tracking-wider">
             {f.category || 'Umum'}
           </span>
           <h4 className="font-bold text-[#0B2F6B]">{f.question}</h4>

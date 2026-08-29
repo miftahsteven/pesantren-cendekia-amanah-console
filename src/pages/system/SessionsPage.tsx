@@ -56,7 +56,7 @@ export function SessionsPage() {
       header: 'IP Address',
       render: (s) => (
         <div className="flex items-center gap-1.5 font-mono text-xs text-[#1A293B]">
-          <Globe className="w-3.5 h-3.5 text-[#17804A]" />
+          <Globe className="w-3.5 h-3.5 text-[#D8232A]" />
           <span>{s.ipAddress || '127.0.0.1'}</span>
         </div>
       )

@@ -64,7 +64,7 @@ export function LoginPage() {
 
         {/* Center Quotation */}
         <div className="relative z-10 space-y-4 max-w-lg">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-white/10 text-[#8ED6A8] border border-white/10 backdrop-blur-xs uppercase tracking-wider">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-white/10 text-[#FCA5A5] border border-white/10 backdrop-blur-xs uppercase tracking-wider">
             Enterprise CMS & Admin Console
           </span>
           <h1 className="text-3xl lg:text-4xl font-black leading-tight tracking-tight text-white">

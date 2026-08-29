@@ -123,7 +123,7 @@ export function AgendaListPage() {
               {a.time}
             </span>
             <span className="flex items-center gap-1">
-              <MapPin className="w-3 h-3 text-[#17804A]" />
+              <MapPin className="w-3 h-3 text-[#D8232A]" />
               {a.location}
             </span>
           </div>

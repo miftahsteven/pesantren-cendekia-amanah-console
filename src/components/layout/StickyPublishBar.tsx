@@ -50,7 +50,7 @@ export function StickyPublishBar({
             onClick={() => onStatusChange('PUBLISHED')}
             className={`px-3 py-1 rounded-lg text-xs font-bold transition-colors ${
               status === 'PUBLISHED'
-                ? 'bg-[#EAF7EF] text-[#17804A] shadow-xs'
+                ? 'bg-[#FDE8E9] text-[#D8232A] shadow-xs'
                 : 'text-[#64748B] hover:text-[#1A293B]'
             }`}
           >

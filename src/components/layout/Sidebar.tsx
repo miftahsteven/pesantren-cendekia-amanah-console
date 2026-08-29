@@ -23,6 +23,7 @@ import {
   ShieldCheck,
   History,
   Laptop,
+  Building2,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
@@ -55,6 +56,8 @@ export function Sidebar() {
         { label: 'Berita', href: '/news', icon: FileText },
         { label: 'Opini & Penulis', href: '/opinions', icon: MessageSquareQuote },
         { label: 'Unit Pendidikan', href: '/units', icon: GraduationCap },
+        { label: 'Struktur Organisasi', href: '/organizations', icon: Users },
+        { label: 'Fasilitas Pesantren', href: '/facilities', icon: Building2 },
         { label: 'Program Unggulan', href: '/programs', icon: Sparkles },
         { label: 'Agenda Kegiatan', href: '/agendas', icon: Calendar },
         { label: 'Prestasi Santri', href: '/achievements', icon: Trophy },
@@ -171,7 +174,7 @@ export function Sidebar() {
                       <span className="flex-1 truncate">{item.label}</span>
                     )}
                     {!sidebarCollapsed && item.badge && (
-                      <span className="px-1.5 py-0.2 rounded-full text-[9px] font-bold bg-[#17804A] text-white uppercase">
+                      <span className="px-1.5 py-0.2 rounded-full text-[9px] font-bold bg-[#D8232A] text-white uppercase">
                         {item.badge}
                       </span>
                     )}
@@ -186,7 +189,7 @@ export function Sidebar() {
         {!sidebarCollapsed && (
           <div className="p-3 border-t border-white/10 bg-[#082452] text-[10px] text-[#8EA2C6] flex items-center justify-between">
             <span>v1.0 Enterprise</span>
-            <span className="text-[#17804A] font-bold">● Server Online</span>
+            <span className="text-[#D8232A] font-bold">● Server Online</span>
           </div>
         )}
       </aside>
