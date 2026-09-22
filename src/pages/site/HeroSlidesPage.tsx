@@ -63,7 +63,7 @@ export function HeroSlidesPage() {
     e.preventDefault();
     try {
       setIsSaving(true);
-      const payload = { badge, title, subtitle, imageUrl, href };
+      const payload = { badge, title, subtitle, imageUrl, href, isActive: true };
       if (editId) {
         await apiClient.put(`/admin/site/slides/${editId}`, payload);
         addToast('Slide banner berhasil diperbarui', 'success');

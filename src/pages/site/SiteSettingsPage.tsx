@@ -3,7 +3,7 @@ import { apiClient } from '../../lib/api-client';
 import { useUI } from '../../context/UIContext';
 import { ImageUploader } from '../../components/ui/ImageUploader';
 import { Breadcrumbs } from '../../components/layout/Breadcrumbs';
-import { Save, User, MapPin, Globe, Sparkles } from 'lucide-react';
+import { Save, User, MapPin, Globe, Sparkles, Video } from 'lucide-react';
 import { SiteSetting } from '../../types';
 
 export function SiteSettingsPage() {
@@ -28,6 +28,7 @@ export function SiteSettingsPage() {
   const [addressText, setAddressText] = useState('');
   const [mapsLink, setMapsLink] = useState('');
   const [logoUrl, setLogoUrl] = useState('');
+  const [virtualTourUrl, setVirtualTourUrl] = useState('');
 
   const { addToast } = useUI();
 
@@ -55,6 +56,7 @@ export function SiteSettingsPage() {
           setAddressText(s.addressText || '');
           setMapsLink(s.mapsLink || '');
           setLogoUrl(s.logoUrl || '');
+          setVirtualTourUrl(s.virtualTourUrl || '');
         }
       } catch (err: any) {
         addToast(err.message || 'Gagal memuat pengaturan website', 'error');
@@ -87,6 +89,7 @@ export function SiteSettingsPage() {
         email,
         addressText,
         mapsLink,
+        virtualTourUrl,
         logoUrl
       });
 
@@ -275,6 +278,30 @@ export function SiteSettingsPage() {
                 placeholder="https://maps.google.com/..."
                 className="w-full p-2.5 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
               />
+            </div>
+          </div>
+
+          {/* Media & Virtual Tour */}
+          <div className="bg-white p-6 rounded-2xl border border-[#DDE6F1] shadow-sm space-y-4">
+            <h3 className="text-sm font-bold text-[#0B2F6B] uppercase tracking-wider flex items-center gap-2 border-b border-[#DDE6F1] pb-2.5">
+              <Video className="w-4 h-4 text-[#D8232A]" />
+              <span>Video Virtual Tour & Profil Kampus</span>
+            </h3>
+
+            <div className="space-y-1.5">
+              <label className="block text-xs font-bold text-[#1A293B]">
+                URL Video YouTube (Virtual Tour / Profil Pesantren)
+              </label>
+              <input
+                type="url"
+                value={virtualTourUrl}
+                onChange={(e) => setVirtualTourUrl(e.target.value)}
+                placeholder="https://www.youtube.com/watch?v=iv-QsaLtvb8"
+                className="w-full p-2.5 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
+              />
+              <p className="text-[11px] text-[#64748B]">
+                Tautan video YouTube ini akan otomatis diputar pada modal interaktif ketika pengunjung mengklik tombol <strong>&quot;VIRTUAL TOUR&quot;</strong> atau <strong>&quot;Video Profil&quot;</strong> di landing page website.
+              </p>
             </div>
           </div>
         </div>
