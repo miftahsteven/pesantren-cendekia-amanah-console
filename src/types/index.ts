@@ -221,6 +221,14 @@ export interface SiteSetting {
   leaderTitle: string;
   leaderPhotoUrl: string;
   leaderQuotes: string[];
+  foundationChairName?: string;
+  foundationChairRole?: string;
+  foundationChairTitle?: string;
+  foundationChairPhotoUrl?: string;
+  foundationQualityName?: string;
+  foundationQualityRole?: string;
+  foundationQualityTitle?: string;
+  foundationQualityPhotoUrl?: string;
   phone: string;
   whatsapp: string;
   email: string;
