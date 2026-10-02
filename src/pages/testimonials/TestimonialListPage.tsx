@@ -112,8 +112,20 @@ export function TestimonialListPage() {
     },
     {
       header: 'Kategori',
-      accessor: 'category',
-      className: 'text-[#64748B]'
+      render: (t) => {
+        const isTokoh = t.category?.toLowerCase() === 'tokoh';
+        return (
+          <span
+            className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+              isTokoh
+                ? 'bg-[#FDE8E9] text-[#D8232A] border border-[#FCA5A5]'
+                : 'bg-[#EBF3FF] text-[#1F5FD0]'
+            }`}
+          >
+            {t.category || 'Umum'}
+          </span>
+        );
+      }
     },
     {
       header: 'Aksi',
@@ -188,6 +200,37 @@ export function TestimonialListPage() {
                 className="w-full p-2.5 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
               />
             </div>
+          </div>
+
+          <div className="space-y-1.5">
+            <label className="block text-xs font-bold text-[#1A293B]">Kategori Testimoni</label>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <select
+                value={['Tokoh', 'Umum', 'Orang Tua Santri', 'Alumni'].includes(category) ? category : 'other'}
+                onChange={(e) => {
+                  if (e.target.value !== 'other') {
+                    setCategory(e.target.value);
+                  }
+                }}
+                className="w-full p-2.5 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
+              >
+                <option value="Tokoh">⭐ Tokoh (Box Besar Kiri)</option>
+                <option value="Umum">Umum (Kotak Kanan)</option>
+                <option value="Orang Tua Santri">Orang Tua Santri (Kotak Kanan)</option>
+                <option value="Alumni">Alumni (Kotak Kanan)</option>
+                <option value="other">Kategori Lainnya...</option>
+              </select>
+              <input
+                type="text"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                placeholder="Nama kategori..."
+                className="w-full p-2.5 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
+              />
+            </div>
+            <p className="text-[11px] text-[#64748B]">
+              Pilih <strong>Tokoh</strong> agar testimoni tampil di box besar unggulan di sebelah kiri beranda.
+            </p>
           </div>
 
           <div className="space-y-1.5">

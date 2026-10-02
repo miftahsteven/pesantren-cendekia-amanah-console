@@ -35,6 +35,7 @@ import { NewsletterPage } from './pages/communication/NewsletterPage';
 import { SiteSettingsPage } from './pages/site/SiteSettingsPage';
 import { HeroSlidesPage } from './pages/site/HeroSlidesPage';
 import { SocialLinksPage } from './pages/site/SocialLinksPage';
+import { StatisticsPage } from './pages/site/StatisticsPage';
 
 import { AdminUsersPage } from './pages/system/AdminUsersPage';
 import { AuditLogsPage } from './pages/system/AuditLogsPage';
@@ -82,6 +83,7 @@ export function App() {
               {/* Website Configuration */}
               <Route path="site-settings" element={<SiteSettingsPage />} />
               <Route path="hero-slides" element={<HeroSlidesPage />} />
+              <Route path="statistics" element={<StatisticsPage />} />
               <Route path="social-links" element={<SocialLinksPage />} />
 
               {/* System & Security */}
