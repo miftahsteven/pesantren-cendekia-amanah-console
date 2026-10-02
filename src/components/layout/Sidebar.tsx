@@ -97,7 +97,7 @@ export function Sidebar() {
       items: [
         { label: 'Pengaturan Website', href: '/site-settings', icon: Sliders },
         { label: 'Hero Slides', href: '/hero-slides', icon: Tv },
-        { label: 'Banner PPDB (Beranda)', href: '/ppdb-banner', icon: Sparkles },
+        { label: 'Banner SPMB (Beranda)', href: '/ppdb-banner', icon: ImageIcon },
         { label: 'Statistik & Infografis', href: '/statistics', icon: BarChart3 },
         { label: 'Media Sosial', href: '/social-links', icon: Share2 }
       ]
