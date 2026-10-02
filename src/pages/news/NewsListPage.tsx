@@ -7,6 +7,7 @@ import { StatusBadge } from '../../components/ui/StatusBadge';
 import { Breadcrumbs } from '../../components/layout/Breadcrumbs';
 import { Plus, Edit, Trash2, ExternalLink, Eye } from 'lucide-react';
 import { getUploadUrl } from '../../lib/uploads';
+import { getPublicWebUrl } from '../../lib/public-url';
 
 export function NewsListPage() {
   const [articles, setArticles] = useState<any[]>([]);
@@ -119,7 +120,7 @@ export function NewsListPage() {
       render: (art) => (
         <div className="flex items-center justify-end gap-1.5">
           <a
-            href={`http://localhost:3000/berita/${art.slug}`}
+            href={`${getPublicWebUrl()}/berita/${art.slug}`}
             target="_blank"
             rel="noopener noreferrer"
             className="p-1.5 rounded-lg text-gray-400 hover:text-[#1F5FD0] hover:bg-blue-50 transition-colors"

@@ -7,6 +7,7 @@ import { StatusBadge } from '../../components/ui/StatusBadge';
 import { Breadcrumbs } from '../../components/layout/Breadcrumbs';
 import { Plus, Edit, Trash2, ExternalLink } from 'lucide-react';
 import { getUploadUrl } from '../../lib/uploads';
+import { getPublicWebUrl } from '../../lib/public-url';
 
 export function OpinionListPage() {
   const [opinions, setOpinions] = useState<any[]>([]);
@@ -97,7 +98,7 @@ export function OpinionListPage() {
       render: (op) => (
         <div className="flex items-center justify-end gap-1.5">
           <a
-            href={`http://localhost:3000/opini/${op.slug}`}
+            href={`${getPublicWebUrl()}/opini/${op.slug}`}
             target="_blank"
             rel="noopener noreferrer"
             className="p-1.5 rounded-lg text-gray-400 hover:text-[#1F5FD0] hover:bg-blue-50 transition-colors"

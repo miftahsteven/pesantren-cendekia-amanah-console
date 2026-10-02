@@ -18,6 +18,7 @@ import {
   ExternalLink,
   ChevronDown
 } from 'lucide-react';
+import { getPublicWebUrl } from '../../lib/public-url';
 
 export function Topbar() {
   const { user, logout } = useAuth();
@@ -141,7 +142,7 @@ export function Topbar() {
 
         {/* View Public Website */}
         <a
-          href="http://localhost:3000"
+          href={getPublicWebUrl()}
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-xl text-[#64748B] hover:text-[#0B2F6B] hover:bg-[#F4F7FB] transition-colors hidden sm:flex items-center gap-1.5 text-xs font-semibold"

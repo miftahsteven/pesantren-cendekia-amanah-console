@@ -5,6 +5,7 @@ import { useUI } from '../../context/UIContext';
 import { Breadcrumbs } from '../../components/layout/Breadcrumbs';
 import { Edit, ExternalLink, Building2, GraduationCap, BookOpen, Award } from 'lucide-react';
 import { getUploadUrl } from '../../lib/uploads';
+import { getPublicWebUrl } from '../../lib/public-url';
 
 const iconMap: Record<string, any> = {
   pesantren: Building2,
@@ -80,7 +81,7 @@ export function UnitListPage() {
 
                 <div className="pt-3 border-t border-[#F1F5F9] flex items-center justify-between">
                   <a
-                    href={`http://localhost:3000/${u.code}`}
+                    href={`${getPublicWebUrl()}/${u.code}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-semibold text-[#64748B] hover:text-[#1F5FD0] flex items-center gap-1"
