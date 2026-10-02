@@ -20,6 +20,11 @@ export function UnitEditorPage() {
   const [profileTitle, setProfileTitle] = useState('');
   const [profileBodyText, setProfileBodyText] = useState('');
   const [curriculumBodyText, setCurriculumBodyText] = useState('');
+  const [welcomeName, setWelcomeName] = useState('');
+  const [welcomeRole, setWelcomeRole] = useState('');
+  const [welcomePhoto, setWelcomePhoto] = useState('');
+  const [welcomeQuote, setWelcomeQuote] = useState('');
+  const [welcomeMessage, setWelcomeMessage] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -40,6 +45,11 @@ export function UnitEditorPage() {
             setProfileTitle(found.profileTitle || '');
             setProfileBodyText(Array.isArray(found.profileBody) ? found.profileBody.join('\n\n') : '');
             setCurriculumBodyText(Array.isArray(found.curriculumBody) ? found.curriculumBody.join('\n') : '');
+            setWelcomeName(found.welcomeName || '');
+            setWelcomeRole(found.welcomeRole || '');
+            setWelcomePhoto(found.welcomePhoto || '');
+            setWelcomeQuote(found.welcomeQuote || '');
+            setWelcomeMessage(found.welcomeMessage || '');
           }
         }
       } catch (err: any) {
@@ -65,7 +75,12 @@ export function UnitEditorPage() {
         heroImage,
         profileTitle,
         profileBody,
-        curriculumBody
+        curriculumBody,
+        welcomeName,
+        welcomeRole,
+        welcomePhoto,
+        welcomeQuote,
+        welcomeMessage
       });
 
       addToast('Data unit pendidikan berhasil disimpan', 'success');
@@ -187,9 +202,69 @@ export function UnitEditorPage() {
               />
             </div>
           </div>
+
+          {/* Sambutan Kepala Unit Section */}
+          <div className="bg-white p-6 rounded-2xl border border-[#DDE6F1] shadow-sm space-y-4">
+            <div className="border-b border-[#DDE6F1] pb-2.5">
+              <h3 className="text-sm font-bold text-[#0B2F6B] uppercase tracking-wider">
+                Sambutan Kepala Unit
+              </h3>
+              <p className="text-xs text-[#64748B] mt-0.5">
+                Kolom profil dan pesan sambutan pimpinan unit pendidikan untuk ditampilkan di halaman profil unit (Khususnya Unit SMP).
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="space-y-1.5">
+                <label className="block text-xs font-bold text-[#1A293B]">Nama Lengkap & Gelar Pimpinan</label>
+                <input
+                  type="text"
+                  value={welcomeName}
+                  onChange={(e) => setWelcomeName(e.target.value)}
+                  placeholder="Contoh: Ust. Sodik, SQ., S.Ud., ME., Gr"
+                  className="w-full p-2.5 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
+                />
+              </div>
+
+              <div className="space-y-1.5">
+                <label className="block text-xs font-bold text-[#1A293B]">Jabatan / Posisi</label>
+                <input
+                  type="text"
+                  value={welcomeRole}
+                  onChange={(e) => setWelcomeRole(e.target.value)}
+                  placeholder="Contoh: Kepala Sekolah SMP Cendekia Amanah"
+                  className="w-full p-2.5 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="block text-xs font-bold text-[#1A293B]">Kutipan Singkat / Quote</label>
+              <input
+                type="text"
+                value={welcomeQuote}
+                onChange={(e) => setWelcomeQuote(e.target.value)}
+                placeholder="Contoh: Membimbing Generasi Remaja Berkarakter Qurani, Berprestasi Akademik..."
+                className="w-full p-2.5 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
+              />
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="block text-xs font-bold text-[#1A293B]">
+                Isi Lengkap Sambutan Kepala Unit <span className="text-[10px] text-[#64748B]">(Mendukung multi-paragraf)</span>
+              </label>
+              <textarea
+                value={welcomeMessage}
+                onChange={(e) => setWelcomeMessage(e.target.value)}
+                rows={6}
+                placeholder="Tuliskan kata sambutan pimpinan unit di sini..."
+                className="w-full p-3 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* Right Hero Image Box */}
+        {/* Right Hero Image & Welcome Photo Box */}
         <div className="lg:col-span-4 space-y-5">
           <div className="bg-white p-6 rounded-2xl border border-[#DDE6F1] shadow-sm space-y-4">
             <h3 className="text-xs font-bold text-[#0B2F6B] uppercase tracking-wider border-b border-[#DDE6F1] pb-2.5">
@@ -201,6 +276,21 @@ export function UnitEditorPage() {
               category="gallery"
               label=""
             />
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-[#DDE6F1] shadow-sm space-y-4">
+            <h3 className="text-xs font-bold text-[#0B2F6B] uppercase tracking-wider border-b border-[#DDE6F1] pb-2.5">
+              Foto Kepala Unit
+            </h3>
+            <ImageUploader
+              value={welcomePhoto}
+              onChange={setWelcomePhoto}
+              category="gallery"
+              label=""
+            />
+            <p className="text-[11px] text-[#64748B]">
+              Foto resmi pimpinan unit untuk kartu profil sambutan di halaman unit.
+            </p>
           </div>
         </div>
       </div>
