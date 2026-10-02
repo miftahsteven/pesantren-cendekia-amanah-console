@@ -210,7 +210,7 @@ export function UnitEditorPage() {
                 Sambutan Kepala Unit
               </h3>
               <p className="text-xs text-[#64748B] mt-0.5">
-                Kolom profil dan pesan sambutan pimpinan unit pendidikan untuk ditampilkan di halaman profil unit (Khususnya Unit SMP).
+                Kolom profil dan pesan sambutan pimpinan unit pendidikan untuk ditampilkan di halaman profil unit (SMP &amp; SMA).
               </p>
             </div>
 

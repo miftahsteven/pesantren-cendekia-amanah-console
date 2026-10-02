@@ -14,6 +14,10 @@ const MONTH_NAMES = [
 const CATEGORIES = [
   'Akademik',
   'Ujian',
+  'Persiapan PTN',
+  'Try Out UTBK',
+  'Riset & Sains',
+  'Bimbingan Karir',
   'Kegiatan Siswa',
   'Peringatan',
   'Kesiswaan',
@@ -341,18 +345,22 @@ export function AgendaListPage() {
             </div>
 
             <div className="space-y-1.5">
-              <label className="block text-xs font-bold text-[#1A293B]">Kategori Agenda</label>
-              <select
+              <label className="block text-xs font-bold text-[#1A293B]">
+                Kategori Agenda <span className="text-[10px] text-[#64748B]">(Pilih atau ketik kategori baru)</span>
+              </label>
+              <input
+                type="text"
+                list="category-options"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
+                placeholder="Contoh: Persiapan PTN / Ujian"
                 className="w-full p-2.5 text-xs bg-[#F8FAFC] border border-[#DDE6F1] rounded-xl focus:outline-hidden focus:border-[#1F5FD0]"
-              >
+              />
+              <datalist id="category-options">
                 {CATEGORIES.map((cat) => (
-                  <option key={cat} value={cat}>
-                    {cat}
-                  </option>
+                  <option key={cat} value={cat} />
                 ))}
-              </select>
+              </datalist>
             </div>
           </div>
 
