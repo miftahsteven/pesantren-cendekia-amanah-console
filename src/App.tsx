@@ -18,6 +18,7 @@ import { UnitEditorPage } from './pages/units/UnitEditorPage';
 
 import { FacilityListPage } from './pages/facilities/FacilityListPage';
 import { OrganizationListPage } from './pages/organizations/OrganizationListPage';
+import { CurriculumListPage } from './pages/curriculums/CurriculumListPage';
 import { ProgramListPage } from './pages/programs/ProgramListPage';
 import { AgendaListPage } from './pages/agenda/AgendaListPage';
 import { AchievementListPage } from './pages/achievements/AchievementListPage';
@@ -64,6 +65,7 @@ export function App() {
               <Route path="units" element={<UnitListPage />} />
               <Route path="units/edit/:id" element={<UnitEditorPage />} />
               <Route path="organizations" element={<OrganizationListPage />} />
+              <Route path="curriculums" element={<CurriculumListPage />} />
               <Route path="facilities" element={<FacilityListPage />} />
 
               <Route path="programs" element={<ProgramListPage />} />
