@@ -30,6 +30,7 @@ import { BrochureListPage } from './pages/brochures/BrochureListPage';
 import { FAQListPage } from './pages/faqs/FAQListPage';
 
 import { PPDBListPage } from './pages/ppdb/PPDBListPage';
+import { PpdbLinksPage } from './pages/ppdb/PpdbLinksPage';
 import { InboxPage } from './pages/communication/InboxPage';
 import { NewsletterPage } from './pages/communication/NewsletterPage';
 
@@ -80,6 +81,7 @@ export function App() {
 
               {/* PPDB & Communication */}
               <Route path="ppdb" element={<PPDBListPage />} />
+              <Route path="ppdb-links" element={<PpdbLinksPage />} />
               <Route path="inbox" element={<InboxPage />} />
               <Route path="newsletters" element={<NewsletterPage />} />
 

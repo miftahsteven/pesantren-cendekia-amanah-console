@@ -27,7 +27,8 @@ import {
   Laptop,
   Building2,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  ExternalLink
 } from 'lucide-react';
 
 interface NavItem {
@@ -80,7 +81,8 @@ export function Sidebar() {
     {
       groupTitle: 'PPDB ONLINE',
       items: [
-        { label: 'Pendaftar PPDB', href: '/ppdb', icon: Users, badge: 'Baru' }
+        { label: 'Pendaftar PPDB', href: '/ppdb', icon: Users, badge: 'Baru' },
+        { label: 'Tautan Form PPDB', href: '/ppdb-links', icon: ExternalLink }
       ]
     },
     {

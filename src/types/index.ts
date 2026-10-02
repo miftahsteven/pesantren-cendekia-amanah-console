@@ -200,6 +200,21 @@ export interface PpdbApplication {
   unit?: { name: string; code: string };
 }
 
+export interface PpdbLinkItem {
+  id: string;
+  unitCode: string;
+  unitName: string;
+  title: string;
+  description?: string;
+  formUrl: string;
+  academicYear: string;
+  badge?: string;
+  isActive: boolean;
+  sortOrder: number;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
 export interface ContactMessage {
   id: string;
   name: string;
